@@ -1,6 +1,7 @@
 fun main(args: Array<String>) {
     val emptyMap = mapOf<String, Int>()
-    args.groupingBy { it }
+    args.sorted()
+        .groupingBy { it }
         .eachCount()
         .forEach {(key, value) -> println("$key $value") }
 }
